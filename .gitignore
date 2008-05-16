@@ -1,0 +1,8 @@
+/Release/
+/Debug/
+/Matrices/Release/
+/Matrices/Debug/
+.vs/
+*.aps
+*.suo
+*.user
