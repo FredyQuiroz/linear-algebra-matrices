@@ -54,6 +54,22 @@ Use the repository’s Issues to report a reproducible build or example issue.
 
 The 2008 snapshot recovers the original Windows exercise. The 2026 reconstruction adds the converted solution and bilingual instructions.
 
+### Verification
+
+On November 19, 2026, both commits built on Windows 11 Pro build 26300 with Visual Studio 18.11.4, MSBuild 18.11.1.51303, MSVC 14.51.36263 (v145) and Windows SDK 10.0.26100.0. For each snapshot, `MSBuild Matrices.sln /m:1 /t:Rebuild /p:Configuration=Release /p:Platform=Win32 /p:PreferredToolArchitecture=x64` and `Release\Matrices.exe` exited with code 0. The dialog encoded and recovered the example with the default key.
+
+![Window showing the sample and its encoded letters](docs/media/hill-encode.png)
+
+The encoded result occupies the second field.
+
+![Window showing the decoded sample without spaces](docs/media/hill-decode.png)
+
+The decoded result appears in the first field.
+
+![Encoding and decoding with the preset matrix](docs/media/hill-example.gif)
+
+The dialog switches from encoding to decoding when the original text is cleared.
+
 ### License
 
 The [MIT notice](LICENSE) covers the project’s own contributions. See [Third-party notices](THIRD-PARTY-NOTICES.md) for the original attribution of the two routines from Matrices.rar.
@@ -112,6 +128,22 @@ Usa la sección Issues para reportar un problema reproducible de compilación o 
 ### Historia
 
 La versión de 2008 recupera el ejercicio original para Windows. La reconstrucción de 2026 agrega la solución convertida y las instrucciones bilingües.
+
+### Verificación
+
+El 19 de noviembre de 2026, ambos commits compilaron en Windows 11 Pro compilación 26300 con Visual Studio 18.11.4, MSBuild 18.11.1.51303, MSVC 14.51.36263 (v145) y SDK de Windows 10.0.26100.0. Para cada versión, `MSBuild Matrices.sln /m:1 /t:Rebuild /p:Configuration=Release /p:Platform=Win32 /p:PreferredToolArchitecture=x64` y `Release\Matrices.exe` terminaron con código 0. El diálogo codificó y recuperó el ejemplo con la clave predeterminada.
+
+![Ventana con el ejemplo y las letras codificadas](docs/media/hill-encode.png)
+
+El resultado codificado ocupa el segundo campo.
+
+![Ventana con el mensaje recuperado sin espacios](docs/media/hill-decode.png)
+
+El resultado recuperado aparece en el primer campo.
+
+![Codificación y recuperación con la matriz predeterminada](docs/media/hill-example.gif)
+
+El cuadro pasa de codificar a recuperar el texto al borrar el mensaje original.
 
 ### Licencia
 
